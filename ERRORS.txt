@@ -1,0 +1,2 @@
+!!! ----------->
+Enter "go run Filename.go" to run the Program
