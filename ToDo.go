@@ -34,7 +34,7 @@ func main() {
 		option := getInput(reader)
 
 		if option == "1" {
-			fmt.Print("Enter the task: ")
+			fmt.Print("/nEnter the task: ")
 			task := getInput(reader)
 
 			id := len(myTasks) + 1
@@ -46,7 +46,7 @@ func main() {
 				continue
 			}
 
-			fmt.Println("Your ToDo tasks:")
+			fmt.Println("/nYour ToDo tasks:")
 			for id, task := range myTasks {
 				fmt.Printf("%d. %s\n", id, task)
 			}
@@ -71,12 +71,14 @@ func main() {
 
 			if _, exists := myTasks[id]; exists {
 				delete(myTasks, id)
-				fmt.Println("Task deleted successfully.")
+				fmt.Println("/nTask deleted successfully.")
 			} else {
-				fmt.Println("Task not found.")
+				fmt.Println("/nTask not found.")
 			}
 		} else if option == "4" {
+			fmt.Println("----------")
 			fmt.Println("Goodbye.")
+			fmt.Println("----------")
 			break
 		} else {
 			fmt.Println("Invalid option.")
